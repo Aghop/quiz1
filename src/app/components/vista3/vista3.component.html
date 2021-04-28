@@ -1,0 +1,21 @@
+
+<form [formGroup]="tareaForm" (ngSubmit)="onSubmit()">
+
+    <label>Titulo</label>
+    <input formControlName="titulo" type="text" >
+
+    <br>
+
+    <label>Estado</label>
+    <select formControlName= "select">
+        <option [ngValue]="null" enabled>select</option>
+        <option *ngFor="let opcion of opciones" [ngValue]="opcion" >
+            {{opcion.opcione}}
+        </option>
+    </select>
+
+    <br>
+
+    <button [disabled]="tareaForm.invalid" type="submit" name="submit">Actualizar</button>
+</form>
+

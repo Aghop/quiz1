@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<div>
+    <ul>
+        <div class="tarea_3">
+            <li *ngFor="let tarea of tareaService.getTareas()">
+                <button (click)="onClick(tarea)" class="tarea_ tarea_{{tarea.estado}}" id="id{{tarea.estado}}"
+                    *ngIf="!tareaService.getEliminados().includes(tarea) && tarea.estado === '3'">
+                    {{ tarea.titulo }}
+                </button>
+
+            </li>
+        </div>
+
+        <div class="tarea_2">
+            <li *ngFor="let tarea of tareaService.getTareas()">
+                <button (click)="onClick(tarea)" class="tarea_ tarea_{{tarea.estado}}" id="id{{tarea.estado}}"
+                    *ngIf="!tareaService.getEliminados().includes(tarea) && tarea.estado === '2'">
+                    {{ tarea.titulo }}
+                </button>
+            </li>
+        </div>
+
+        <div class="tarea_1">
+            <li *ngFor="let tarea of tareaService.getTareas()">
+                <button (click)="onClick(tarea)" class="tarea_ tarea_{{tarea.estado}}" id="id{{tarea.estado}}"
+                    *ngIf="!tareaService.getEliminados().includes(tarea) && tarea.estado === '1'">
+                    {{ tarea.titulo }}
+                </button>
+
+                <button (click)="onX(tarea)" class="tarea_ tarea_{{tarea.estado}}"
+                    *ngIf="!tareaService.getEliminados().includes(tarea) && tarea.estado === '1' "
+                    id="id{{tarea.estado}}">X</button>
+            </li>
+        </div>
+
+    </ul>
+    <a [routerLink]="['/anadir']"><button name="anadir" id="anadir"><i class="fas fa-plus fa-2x"></i></button></a>
+</div>

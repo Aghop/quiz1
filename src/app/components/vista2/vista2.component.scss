@@ -1,0 +1,62 @@
+$verde:#4CAF50;
+
+$amarillo:#ddc74c;
+
+$rojo:rgb(185, 51, 51);
+*{
+        font-size: 20px;
+        font-weight: bold;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.tarea_1{
+    width: 70%;
+   display: inline-block;
+}
+#anadir{
+    background-color: white;
+    border: none;
+    
+}
+#id1{
+    background-color: $rojo;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+#id2{
+    background-color: $amarillo;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#id3{
+    background-color: $verde;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.tarea_2{
+    width: 70%;
+    
+}
+
+.tarea_3{
+    width: 70%;
+}
+
+li{
+    list-style-type: none;
+}
